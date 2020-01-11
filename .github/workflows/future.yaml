@@ -10,16 +10,16 @@ jobs:
     - uses: actions/checkout@v1
     - name: Install prereqs
       run: sudo apt install -y awscli npm
-    - name: Generate service worker
-      run: npx workbox-cli generateSW workbox-config.js
+    - name: Build
+      run: npm run build
     - name: Upload to S3
-      run: aws s3 sync . s3://$URL/ --delete --exclude ".*" --exclude "README.md"
+      run: aws s3 sync build/ s3://$URL/ --delete
       env:
         URL: ${{ secrets.URL_FUTURE }}
         AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
         AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
     - name: Set no-cache on the service worker
-      run: aws s3 cp s3://$URL/sw.js s3://$URL/sw.js --metadata-directive REPLACE --cache-control no-cache
+      run: aws s3 cp s3://$URL/service-worker.js s3://$URL/service-worker.js --metadata-directive REPLACE --cache-control no-cache
       env:
         URL: ${{ secrets.URL_FUTURE }}
         AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
