@@ -1,19 +1,8 @@
 # Farese
 
-### Contributing
+## Future branch
 
-Hey, if you want to contribute updates to churches, I'd appreciate it!
-
-Using git is a whole world of its own, so send me an email or open a Github issue with any questions you have.
-
-Some prerequisites to have installed:
- - python2
-
-Basic instructions are:
- - Update the church listing in the `map/data.json` file
- - Run `build/prepare.sh`
-
-Then open a pull request!
+This is a rewrite using React. I'll be pulling in parts of the old site as I make progress, and as I learn.
 
 ### Licenses
 
