@@ -4,78 +4,95 @@ import theme from './theme';
 import { 
   Box,
   Heading,
-  Button,
+  Image,
   Flex,
   Text,
-  Link,
-  Card
+  Link
 } from 'rebass'
 
 const App = props => {
   return(
     <>
-      <ThemeProvider theme={theme}>
+      <ThemeProvider
+        theme={theme}>
         <Flex
           p={2}
           color='white'
           bg='primary'
           alignItems='center'>
-          <Text p={2} fontWeight='bold'>Farese</Text>
+          <Text
+            p={2}
+            fontWeight='bold'>
+              Farese
+          </Text>
           <Box mx='auto' />
           <Link
             variant='nav'
             href='/'
             px={2}
             color='white'>
-            Home
+              Home
           </Link>
           <Link
             variant='nav'
             href='/about'
             px={2}
             color='white'>
-            About
+              About
           </Link>
           <Link
             variant='nav'
             href='/map'
             px={2}
             color='white'>
-            Map
+              Map
           </Link>
           <Link
             variant='nav'
             href='/list'
             px={2}
             color='white'>
-            List
+              List
           </Link>
           <Link
             variant='nav'
             href='/legacy'
             px={2}
             color='white'>
-            Legacy
+              Legacy
           </Link>
         </Flex>
 
-        <Box
-          p={5}
-          fontSize={4}
-          width={[ 1, 1, 1 ]}
-          color='white'
-          bg='primary'>
-            Welcome to an online directory
-            of Reformed Baptist churches
-        </Box>
-
         <Flex
           color='white'
-          bg='secondary'>
+          bg='primary'
+          p={4}>
+          <Box
+            p={3}>
+            <Heading
+              as='h1'
+              color='white'
+              textAlign='center'>
+                Welcome to an online directory
+            </Heading>
+            <Heading
+              as='h2'
+              color='white'
+              textAlign='center'>
+                of Reformed Baptist churches
+            </Heading>
+          </Box>
+        </Flex>
+
+        <Flex
+          bg='secondary'
+          color='light'
+          p={4}>
           <Box
             p={3}>
             <Heading
               as='h2'
+              color='white'
               textAlign='center'>
                 About
             </Heading>
@@ -92,6 +109,7 @@ const App = props => {
             p={3}>
             <Heading
               as='h2'
+              color='white'
               textAlign='center'>
                 Quick Disclaimer
             </Heading>
@@ -104,6 +122,33 @@ const App = props => {
             </Text>
           </Box>
         </Flex>
+
+        <Flex
+          alignItems='center'>
+          <Box
+            p={3}>
+            <Heading
+              as='h1'
+              color='secondary'
+              textAlign='center'>
+                Find a church
+            </Heading>
+            <Text
+              p={2}
+              fontSize={2}>
+                Visit the map to search by location
+                to find a church nearby, whether at
+                home or traveling.
+            </Text>
+          </Box>
+          <Box>
+            <Image
+              p={4}
+              src='https://source.unsplash.com/random/512x384?mountains'
+            />
+          </Box>
+        </Flex>
+
       </ThemeProvider>
     </>
   );
