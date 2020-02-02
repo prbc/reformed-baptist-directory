@@ -1,8 +1,6 @@
 import React from 'react';
-import { ThemeProvider } from 'emotion-theming';
-import theme from '@rebass/preset';
-//import logo from './logo.svg';
-//import './App.css';
+import { ThemeProvider } from 'theme-ui';
+import theme from './theme';
 import { 
   Box,
   Heading,
@@ -67,63 +65,43 @@ const App = props => {
           width={[ 1, 1, 1 ]}
           color='white'
           bg='primary'>
-          
-          Welcome to an online directory
-          of Reformed Baptist churches
-
+            Welcome to an online directory
+            of Reformed Baptist churches
         </Box>
 
-        <Flex>
+        <Flex
+          color='white'
+          bg='secondary'>
           <Box
-            padding={4}
-            width={1/2}>
-            <Card
-              sx={{
-                p: 3,
-                borderRadius: 16,
-                boxShadow: '0 0 12px rgba(0, 0, 0, .15)',
-              }}>
-              <Box p={3}>
-                <Heading
-                  as='h2'
-                  textAlign='center'>
-                    About
-                </Heading>
-                <Text
-                  p={2}
-                  fontSize={2}>
-                  This directory of Reformed Baptist churches is a collection of 560 churches that hold to the 
-                  1689 London Baptist Confession of Faith or a similar statement of faith. It is our desire that 
-                  this list would be used of God to help Christians find a church when considering a move, or 
-                  when planning a trip.
-                </Text>
-              </Box>
-            </Card>
+            p={3}>
+            <Heading
+              as='h2'
+              textAlign='center'>
+                About
+            </Heading>
+            <Text
+              p={2}
+              fontSize={2}>
+                This directory of Reformed Baptist churches is a collection of 560 churches that hold to the 
+                1689 London Baptist Confession of Faith or a similar statement of faith. It is our desire that 
+                this list would be used of God to help Christians find a church when considering a move, or 
+                when planning a trip.
+            </Text>
           </Box>
           <Box
-            padding={4}
-            width={1/2}>
-            <Card
-              sx={{
-                p: 3,
-                borderRadius: 16,
-                boxShadow: '0 0 12px rgba(0, 0, 0, .15)',
-              }}>
-              <Box p={3}>
-                <Heading
-                  as='h2'
-                  textAlign='center'>
-                    Quick Disclaimer
-                </Heading>
-                <Text
-                  p={2}
-                  fontSize={2}>
-                  We do not personally know all of these churches nor can we recommend them from personal knowledge.
-                  Some of the churches listed in this directory may not be considered by all to be distinctly Reformed.
-                  However, they would be like-minded in several areas of faith and practice and so are listed on this directory.
-                </Text>
-              </Box>
-            </Card>
+            p={3}>
+            <Heading
+              as='h2'
+              textAlign='center'>
+                Quick Disclaimer
+            </Heading>
+            <Text
+              p={2}
+              fontSize={2}>
+                We do not personally know all of these churches nor can we recommend them from personal knowledge.
+                Some of the churches listed in this directory may not be considered by all to be distinctly Reformed.
+                However, they would be like-minded in several areas of faith and practice and so are listed on this directory.
+            </Text>
           </Box>
         </Flex>
       </ThemeProvider>
