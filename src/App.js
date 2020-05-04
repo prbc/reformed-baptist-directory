@@ -1,7 +1,7 @@
 import React from 'react';
 import { ThemeProvider } from 'theme-ui';
 import theme from './theme';
-import { 
+import {
   Box,
   Heading,
   Image,
@@ -11,139 +11,153 @@ import {
 } from 'rebass'
 
 const App = props => {
-  return(
+  return (
     <>
       <ThemeProvider
         theme={theme}>
+
         <Flex
           p={2}
           color='white'
           bg='primary'
-          alignItems='center'>
-          <Text
-            p={2}
-            fontWeight='bold'>
+          alignItems='center'
+        >
+          <Box>
+            <Text
+              p={3}
+              fontSize='3'
+              fontWeight='bold'>
               Farese
-          </Text>
-          <Box mx='auto' />
-          <Link
-            variant='nav'
-            href='/'
-            px={2}
-            color='white'>
+            </Text>
+          </Box>
+          <Box
+            alignItems='right'>
+
+            <Link
+              href='/'
+              px={3}
+              color='white'>
               Home
-          </Link>
-          <Link
-            variant='nav'
-            href='/about'
-            px={2}
-            color='white'>
+              </Link>
+            <Link
+              variant='nav'
+              href='/about'
+              px={3}
+              color='white'>
               About
-          </Link>
-          <Link
-            variant='nav'
-            href='/map'
-            px={2}
-            color='white'>
+              </Link>
+            <Link
+              variant='nav'
+              href='/map'
+              px={3}
+              color='white'>
               Map
-          </Link>
-          <Link
-            variant='nav'
-            href='/list'
-            px={2}
-            color='white'>
+              </Link>
+            <Link
+              variant='nav'
+              href='/list'
+              px={3}
+              color='white'>
               List
-          </Link>
-          <Link
-            variant='nav'
-            href='/legacy'
-            px={2}
-            color='white'>
+              </Link>
+            <Link
+              variant='nav'
+              href='/legacy'
+              px={3}
+              color='white'>
               Legacy
-          </Link>
+              </Link>
+
+          </Box>
         </Flex>
 
         <Flex
           color='white'
           bg='primary'
+          justifyContent='center'
           p={4}>
           <Box
             p={3}>
-            <Heading
-              as='h1'
+            <Text
+              fontSize='5'
+              fontWeight='bold'
               color='white'
-              textAlign='center'>
-                Welcome to an online directory
-            </Heading>
-            <Heading
-              as='h2'
-              color='white'
-              textAlign='center'>
-                of Reformed Baptist churches
-            </Heading>
+              textAlign='center'
+            >
+              Welcome to an online directory
+              of Reformed Baptist churches
+            </Text>
           </Box>
         </Flex>
 
         <Flex
           bg='secondary'
           color='light'
-          p={4}>
+          p={4}
+          flexWrap={['wrap', 'nowrap', 'nowrap']}
+          justifyContent='space-evenly'
+        >
           <Box
+            maxWidth='30em'
             p={3}>
             <Heading
               as='h2'
               color='white'
               textAlign='center'>
-                About
+              About
             </Heading>
             <Text
               p={2}
               fontSize={2}>
-                This directory of Reformed Baptist churches is a collection of 560 churches that hold to the 
-                1689 London Baptist Confession of Faith or a similar statement of faith. It is our desire that 
-                this list would be used of God to help Christians find a church when considering a move, or 
-                when planning a trip.
+              This directory of Reformed Baptist churches is a collection of 560 churches that hold to the
+              1689 London Baptist Confession of Faith or a similar statement of faith. It is our desire that
+              this list would be used of God to help Christians find a church when considering a move, or
+              when planning a trip.
             </Text>
           </Box>
           <Box
+            maxWidth='30em'
             p={3}>
             <Heading
               as='h2'
               color='white'
               textAlign='center'>
-                Quick Disclaimer
+              Quick Disclaimer
             </Heading>
             <Text
               p={2}
               fontSize={2}>
-                We do not personally know all of these churches nor can we recommend them from personal knowledge.
-                Some of the churches listed in this directory may not be considered by all to be distinctly Reformed.
-                However, they would be like-minded in several areas of faith and practice and so are listed on this directory.
+              We do not personally know all of these churches nor can we recommend them from personal knowledge.
+              Some of the churches listed in this directory may not be considered by all to be distinctly Reformed.
+              However, they would be like-minded in several areas of faith and practice and so are listed on this directory.
             </Text>
           </Box>
         </Flex>
 
         <Flex
-          alignItems='center'>
+          p={4}
+          flexWrap={['wrap', 'nowrap', 'nowrap']}
+          justifyContent='space-evenly'
+        >
           <Box
+            maxWidth='30em'
             p={3}>
             <Heading
               as='h1'
-              color='secondary'
               textAlign='center'>
-                Find a church
+              Find a church
             </Heading>
             <Text
               p={2}
               fontSize={2}>
-                Visit the map to search by location
-                to find a church nearby, whether at
-                home or traveling.
+              Visit the map to search by location
+              to find a church nearby, whether at
+              home or traveling.
             </Text>
           </Box>
           <Box>
             <Image
-              p={4}
+              p={2}
               src='https://source.unsplash.com/random/512x384?mountains'
             />
           </Box>

@@ -39,6 +39,7 @@ export default {
     nav: {
       fontWeight: 'bold',
       textDecoration: 'none',
+      color: 'white'
     }
   },
   styles: {

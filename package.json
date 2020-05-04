@@ -12,6 +12,7 @@
     "react-dom": "^16.12.0",
     "react-scripts": "3.3.0",
     "rebass": "^4.0.7",
+    "reflexbox": "^4.0.6",
     "theme-ui": "^0.3.1"
   },
   "scripts": {
