@@ -137,6 +137,7 @@ const App = props => {
         <Flex
           p={4}
           flexWrap={['wrap', 'nowrap', 'nowrap']}
+          alignItems='center'
           justifyContent='space-evenly'
         >
           <Box
