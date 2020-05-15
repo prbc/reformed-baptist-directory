@@ -30,45 +30,49 @@ const App = props => {
               Farese
             </Text>
           </Box>
+          <Box mx='auto' />
+
           <Box
-            alignItems='right'>
+            width={['0%', '100%', '100%']}>
 
             <Link
               href='/'
               px={3}
-              color='white'>
+              color='inherit'>
               Home
               </Link>
             <Link
               variant='nav'
               href='/about'
               px={3}
-              color='white'>
+              color='inherit'>
               About
               </Link>
             <Link
               variant='nav'
               href='/map'
               px={3}
-              color='white'>
+              color='inherit'>
               Map
               </Link>
             <Link
               variant='nav'
               href='/list'
               px={3}
-              color='white'>
+              color='inherit'>
               List
               </Link>
             <Link
               variant='nav'
               href='/legacy'
               px={3}
-              color='white'>
+              color='inherit'>
               Legacy
               </Link>
 
           </Box>
+
+
         </Flex>
 
         <Flex
